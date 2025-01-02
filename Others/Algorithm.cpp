@@ -4,14 +4,22 @@ using namespace std;
 
 int main()
 {
-    
-    int N;
-    cin >> N;
-    int factorial = 1;
-    for (int i = 1; i <= N; ++i) {
-        factorial = (factorial * i) % 10000;
+
+    int n;
+    cin>>n;
+
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
     }
-    cout << factorial << endl;
+
+    for(int i=n-1;i>=0;i--)
+    {
+        cout<<arr[i]<<" ";
+    }
+    
+
 
     return 0;
 }
