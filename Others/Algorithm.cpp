@@ -4,17 +4,24 @@ using namespace std;
 
 int main()
 {
-    //  leap year
-    int year;
-    cout<<"Enter a year: ";
-    cin>>year;
-    if(year%4==0 && year%100!=0 || year%400==0)
+    //  matrix
+    int m,n;
+    cin>>m>>n;
+    int arr[m][n];
+    for(int i=0;i<m;i++)
     {
-        cout<<year<<" is a leap year.";
+        for(int j=0;j<n;j++)
+        {
+            cin>>arr[i][j];
+        }
     }
-    else
+    for(int i=0;i<m;i++)
     {
-        cout<<year<<" is not a leap year.";
+        for(int j=0;j<n;j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
     }
     
 
