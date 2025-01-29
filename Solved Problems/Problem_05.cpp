@@ -22,6 +22,5 @@ int main()
         cout << "\nEnter a valid number!";
     }
 
-    
     return 0;
 }

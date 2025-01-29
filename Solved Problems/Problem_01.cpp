@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     int a = 20, b = 22;
-    if (a < b && b > a)
+    if (a < b)
     {
         cout << b << " is greater then " << a;
     }
