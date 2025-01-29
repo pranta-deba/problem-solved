@@ -9,17 +9,17 @@ int main()
     cout << "Enter three numbers (ex: 10 20 30): ";
     cin >> a >> b >> c;
 
-     if (a > b && a > c)
+    if (a > b && a > c)
     {
-        cout << a << " is greater then into " << b << " and " << c;
+        cout << a << " is greater then into " << b << ", " << c;
     }
     else if (b > a && b > c)
     {
-        cout << b << " is greater then into " << a << " and " << c;
+        cout << b << " is greater then into " << a << ", " << c;
     }
     else
     {
-        cout << c << " is greater then into " << a << " and " << b;
+        cout << c << " is greater then into " << a << ", " << b;
     }
     return 0;
 }
