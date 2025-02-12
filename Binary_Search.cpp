@@ -1,40 +1,60 @@
-#include <bits/stdc++.h>
+#include <iostream>
 #include <vector>
 using namespace std;
 
 int binarySearch(vector<int> arr, int target)
 {
-    int start = 0, end = arr.size() - 1;
-    while (start <= end)
+    int startIdx = 0;
+    int endIdx = arr.size() - 1;
+    int loc = 0;
+
+    while (startIdx <= endIdx)
     {
-        int mid = (start + end) / 2;
+        int mid = (startIdx + endIdx) / 2;
+        loc++;
 
         if (target > arr[mid])
         {
-            start = mid + 1;
+            startIdx = mid + 1;
         }
         else if (target < arr[mid])
         {
-            end = mid - 1;
+            endIdx = mid - 1;
         }
         else
         {
+            cout << "No of comparison : " << loc << endl;
             return mid;
+            break;
         }
     }
     return -1;
-}
+};
 
 int main()
 {
+    int n;
+    cout << "Enter a size of array: ";
+    cin >> n;
 
-    vector<int> arr1 = {-1, 0, 3, 4, 5, 9, 12}; // odd
-    int target1 = 3;
-    cout << binarySearch(arr1, target1) << endl;
+    vector<int> arr(n);
+    cout << "Enter a elements: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
 
-    vector<int> arr2 = {-1, 0, 3, 4, 5, 9, 12}; // even
-    int target2 = 0;
-    cout << binarySearch(arr2, target2) << endl;
+    int target;
+    cout << "Enter a Find Value: ";
+    cin >> target;
 
-    return 0;
+    int result = binarySearch(arr, target);
+    if (result >= 0)
+    {
+        cout << "The value find in : " << result << " Index" << endl;
+    }
+    else
+    {
+        cout << "The value NOT FOUND!" << endl;
+    }
 }
