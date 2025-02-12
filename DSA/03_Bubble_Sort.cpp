@@ -22,6 +22,7 @@ void printArray(vector<int> arr, int n)
     {
         cout << ele << " ";
     }
+    cout << endl;
 }
 
 int main()
