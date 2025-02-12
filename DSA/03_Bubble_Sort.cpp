@@ -2,11 +2,11 @@
 #include <vector>
 using namespace std;
 
-int bubbleSort(vector<int> arr, int n)
+void bubbleSort(vector<int> arr, int n) // O(n^2)
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n - 1; i++) // 1*n
     {
-        for (int j = 0; j < n - i - 1; j++)
+        for (int j = 0; j < n - i - 1; j++) // n*n
         {
             if (arr[j] > arr[j + 1])
             {
@@ -14,6 +14,9 @@ int bubbleSort(vector<int> arr, int n)
             }
         }
     }
+}
+void printArray(vector<int> arr, int n)
+{
     cout << "Sorted Array: ";
     for (int ele : arr)
     {
@@ -35,6 +38,7 @@ int main()
     }
 
     bubbleSort(arr, n);
+    printArray(arr, n);
 
     return 0;
 }
