@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int greater(int num1, int num2)
+int findGreater(int num1, int num2)
 {
     if (num1 > num2)
     {
@@ -19,6 +19,12 @@ int greater(int num1, int num2)
 
 int main()
 {
+    int number1, number2;
+
+    cout << "Enter two numbers: ";
+    cin >> number1 >> number2;
+
+    cout << "The greater number is: " << findGreater(number1, number2) << endl;
 
     return 0;
 }
