@@ -6,7 +6,8 @@
 using namespace std;
 
 int main() {
-
+    int num;
+    long long factorial = 1;
 
 
     return 0;
