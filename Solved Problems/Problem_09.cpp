@@ -14,6 +14,7 @@ int main() {
         num /= 10;                     
     }
 
+    cout << "Reversed number: " << reversedNum << endl;
 
 
     return 0;
