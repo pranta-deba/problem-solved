@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void bubbleSort(vector<int> arr, int n) // O(n^2)
+void bubbleSort(vector<int> &arr, int n) // O(n^2)
 {
     for (int i = 0; i < n - 1; i++) // 1*n
     {
