@@ -58,7 +58,7 @@ int main()
     {
         philosopher_ids[i] = i;
         if (pthread_create(&philosophers_thread[i], NULL, philosophers, &philosopher_ids[i]) != 0)
-        { // Added error checking
+        {
             perror("pthread_create failed");
             exit(EXIT_FAILURE);
         }
