@@ -13,7 +13,7 @@ void insert(vector<int> &heap, int value)
     // Sift up to maintain max heap property
     while (i != 0 && heap[(i - 1) / 2] < heap[i])
     {
-        std::swap(heap[i], heap[(i - 1) / 2]);
+        swap(heap[i], heap[(i - 1) / 2]);
         i = (i - 1) / 2;
     }
 }
